@@ -1,3 +1,3 @@
-# trabalhos-para-a-faculdade
+# Trabalhos de progamação para a Faculdade
 
 Trabalhos de programação desenvolvidos em diversas linguagens de programação para a faculdade de Sistemas de informação.
