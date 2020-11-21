@@ -1,0 +1,16 @@
+package trabalhopoo1_2020_2;
+
+public class Netuno extends Compacto{
+    public Netuno(String cor) {
+        super("TitaHatch", "Netuno", cor, "Compacto", new Motor(true, 1400, 160));
+    }
+
+    @Override
+    public void construir(Estoque estoque) throws FaltouInsumoException{
+        Fabrica.produz(estoque, "Aço", 200, this); // Aço...
+        Fabrica.produz(estoque, "Ferro", 200, this); // Ferro...
+        Fabrica.produz(estoque, "Alumínio", 200, this); // Alumínio...
+        Fabrica.produz(estoque, "Cobre", 100, this); // Cobre...
+        Fabrica.produz(estoque, "Chumbo", 20, this); // Chumbo...
+    }
+}

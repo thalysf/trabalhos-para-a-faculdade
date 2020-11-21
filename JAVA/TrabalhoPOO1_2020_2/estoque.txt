@@ -1,0 +1,7 @@
+Madeira 40000
+Aço 50000
+Ferro 60000
+Alumínio 20000
+Ouro 5000
+Cobre 10000
+Chumbo 40000
