@@ -1,6 +1,6 @@
 package trabalhopoo1_2020_2;
 
-public class Fabrica {
+public class Fabrica { 
 
     public static void produz(Estoque estoque, String item, int qtd, Carro carro) throws FaltouInsumoException{
         switch (item) {

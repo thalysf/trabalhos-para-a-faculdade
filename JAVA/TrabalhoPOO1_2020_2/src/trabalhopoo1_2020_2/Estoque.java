@@ -85,8 +85,7 @@ public class Estoque {
     }
 
     @Override
-    public String toString() {
+    public String toString() { // Apenas para necessidade de visualizar o estoque recuperado do arquivo "estoque.txt"
         return "Estoque{" + "madeira=" + madeira + ", aco=" + aco + ", ferro=" + ferro + ", aluminio=" + aluminio + ", ouro=" + ouro + ", cobre=" + cobre + ", chumbo=" + chumbo + '}';
     }
-    
 }

@@ -10,5 +10,4 @@ public abstract class Compacto extends Carro{
         super(codigo, nome, cor, tipo, motor);
         Compacto.qtdCompacto++;
     }
-    
 }

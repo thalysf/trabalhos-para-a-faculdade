@@ -6,10 +6,9 @@ import java.text.DecimalFormat;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Scanner;
-
 /**
  *
- * @author thalys fabrete - V06
+ * @author Thalys Fabrete Cândido- V06
  */
 public class TrabalhoPOO1_2020_2 {
 
@@ -36,10 +35,11 @@ public class TrabalhoPOO1_2020_2 {
                 qtdMenos100Cavalos++;
             }
         }
+        
         mediaCilindradas = mediaCilindradas / carros.size(); // Calculando média de cilindradas
         carrosRepetidos = verificaRepetido(carrosRepetidos); // Recebendo o retorno dos carros repetidos
         
-        System.out.println("1) " + carrosRepetidos.toString());
+        System.out.println("1) " + carrosRepetidos.toString().replace("[", "").replace("]", ""));
         System.out.println("2) " + qtdMenos100Cavalos);
         System.out.println("3) Não turbo: " + naoTurbo + " e Turbo: " + turbo);
         System.out.println("4) " + df.format(mediaCilindradas) + " Cilindradas");
@@ -51,7 +51,6 @@ public class TrabalhoPOO1_2020_2 {
 
                     Carro carro = (Carro) it.next();
                     carro.construir(estoque);
-
                 }
                 dias++;
             }
@@ -98,7 +97,6 @@ public class TrabalhoPOO1_2020_2 {
             fileNot.getMessage();
         }
         return carrosList; // retornando a lista de carros lida do arquivo 'carros.txt'
-
     }
 
     public static Estoque lerEstoque() throws FileNotFoundException {
@@ -137,8 +135,8 @@ public class TrabalhoPOO1_2020_2 {
             fileNot.getMessage();
         }
         return estoque; // retornando o estoque lido do arquivo 'estoque.txt'
-
     }
+    
     public static LinkedList<String> verificaRepetido(LinkedList<String> carrosRepetidos)
     {
         LinkedList<String> repetidos = new LinkedList<String>();
@@ -163,7 +161,6 @@ public class TrabalhoPOO1_2020_2 {
         if(carrosRepetidos.contains("Posseidon")) repetidos.add("Posseidon");
         if(carrosRepetidos.contains("Hades")) repetidos.add("Hades");
         if(carrosRepetidos.contains("Zeus")) repetidos.add("Zeus");
-        return repetidos;
-        
+        return repetidos;  
     }
 }

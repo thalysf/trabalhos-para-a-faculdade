@@ -1,7 +1,5 @@
 package trabalhopoo1_2020_2;
 
-
-
 public abstract class Sedan extends Carro{
     private static int qtdSedan = 0;
 
@@ -13,7 +11,4 @@ public abstract class Sedan extends Carro{
         super(codigo, nome, cor, tipo, motor);
         Sedan.qtdSedan++;
     }
-
-  
 }
-

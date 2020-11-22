@@ -17,7 +17,7 @@ public abstract class Carro {
     public abstract void construir(Estoque estoque) throws FaltouInsumoException;
 
     @Override
-    public String toString() {
+    public String toString() { // apenas pra necessidade de visualizar os carros recuperados do documento "carros.txt"
         return "Carro{" + "codigo=" + codigo + ", nome=" + nome + ", cor=" + cor + ", tipo=" + tipo + ", motor=" + motor + '}';
     }
   
@@ -40,5 +40,4 @@ public abstract class Carro {
     public Motor getMotor() {
         return motor;
     }
-    
 }
