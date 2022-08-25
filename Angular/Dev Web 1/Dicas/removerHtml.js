@@ -1,0 +1,2 @@
+var textoComHtml = "Lorem <p><strong>ipsum dolor</strong></p> sit amet, consectetur adipiscing elit. <strong>Vestibulum<strong> eu feugiat elit. Integer ipsum ex, aliquet in fermentum in, aliquam non erat. Fusce tristique commodo tortor sed ultricies. Mauris ac dapibus ex. In nisi metus, suscipit id vestibulum ac, condimentum vel elit. Integer dapibus ultricies quam sit amet ultrices. Nam scelerisque sagittis neque a aliquam.";
+console.log(textoComHtml.replace(/(&nbsp;|<([^>]+)>)/ig, "") );

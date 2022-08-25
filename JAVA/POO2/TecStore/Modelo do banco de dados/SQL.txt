@@ -1,0 +1,65 @@
+-- DDL
+CREATE TABLE USUARIO(
+	id_usuario serial primary key,
+	nome varchar(100) not null,
+	email varchar(50) not null,
+	sexo char(1) CHECK(upper(sexo) = ('M') or upper(sexo) = 'F') not null, -- M -> Masculino, F -> Feminino
+	tipo_usuario char(1) CHECK(upper(tipo_usuario) = ('A') or upper(tipo_usuario) = 'C') not null, -- A -> Administrador, C -> Cliente
+	senha varchar(100) not null,
+	CPF varchar(11) not null UNIQUE
+);
+
+CREATE TABLE CATEGORIA(
+	id_categoria serial primary key,
+	nome varchar(100) not null UNIQUE
+);
+
+CREATE TABLE PRODUTO(
+	id_produto serial primary key,
+	id_categoria integer not null references CATEGORIA(id_categoria),
+	nome varchar(100) not null,
+	preco numeric(9, 2) not null
+);
+
+CREATE TABLE PEDIDO(
+	id_pedido serial primary key,
+	id_usuario integer not null references USUARIO(id_usuario),
+	tipoPagamento char(1) CHECK(upper(tipoPagamento) = ('D') or upper(tipoPagamento) = 'C') not null, -- D -> Dinheiro, C -> Cartão
+	dataPedido timestamp not null
+);
+
+CREATE TABLE CARRINHO_PEDIDO(
+	id_pedido integer not null references PEDIDO(id_pedido),
+	id_produto integer not null references PRODUTO(id_produto),
+	qtdPorProduto integer not null,
+	primary key(id_pedido, id_produto)
+);
+
+-- DML
+
+INSERT INTO USUARIO(nome, email, sexo, tipo_usuario, senha, CPF)
+VALUES
+('Thalys Fabrete Cândido', 'thalys.fabrete@tecstore.com.br','M', 'A', 'thADM123', '19017510668'),
+('Elizangela Pereira Silva', 'elizangela.pereira@tecstore.com.br','F', 'A', 'elADM123', '57655230641'),
+('Carlos Pereira Barbosa', 'carlos.pereira@gmail.com', 'M', 'C', 'caCLI123', '89896353654');
+
+INSERT INTO CATEGORIA(nome)
+VALUES ('Televisão'), ('Videogame'), ('Celular');
+ 
+INSERT INTO PRODUTO(id_categoria, nome, preco)
+VALUES
+(1, 'Smart TV LED 43 Full HD LG', 2079.55),
+(2, 'Playstation 4 Slim 1TB', 2659.05),
+(3, 'Smartphone Xiaomi Redmi Note 9S - 4GB + 64GB', 1504.60);
+
+INSERT INTO PEDIDO(id_usuario, tipoPagamento, dataPedido)
+VALUES
+(3, 'D', now());
+
+INSERT INTO CARRINHO_PEDIDO(id_pedido, id_produto, qtdPorProduto)
+VALUES
+(1, 1, 1), (1, 2, 1), (1, 3, 1);
+
+-- Consultas
+SELECT * FROM PRODUTO
+SELECT * FROM CATEGORIA

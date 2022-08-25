@@ -1,0 +1,7 @@
+Link do projeto no GitHub:
+
+https://github.com/thalysf/Angular-9-Application
+
+Comando para realizer um clone do projeto por https (se desejar):
+
+git clone https://github.com/thalysf/Angular-9-Application.git

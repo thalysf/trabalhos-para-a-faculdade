@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVGA - Artigos Eletrônicos</title>
+    <!-- Estilos -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <style>
+        .ondeEstamos li
+        {
+            color: #000 !important;
+        }
+    </style>
+    <!-- Script FontAwesome-->
+    <script src="https://kit.fontawesome.com/d0aebddfaf.js" crossorigin="anonymous"></script>
+    <!-- Paralax-->
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+    <!-- Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- Linkar bootstrap CDN e jQuery e FontAwesome para ícones--> 
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container-fluid cabecalho">
+                <div class="row">
+                    <div class="col-md-6 logo">
+                            <h1 class="logo-evga"><img src="img/EVGA-logo-13.png" alt="logo"></h1>
+                    </div>
+                    <div class="col-md-6 elementos-busca">
+                        <form action="index.html" method="post" class="procura">
+                            <input type="text" name="busca" id="busca" placeholder="Faça uma busca" class="float-left">
+                            <button id="btn-search" class="float-right"> 
+                                 <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+        </div>
+    </header>
+    <!-- Barra de Navegação -->
+    
+    <nav class="navegacao">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 ">
+                    <div class="float-left nav-links">
+                        <ul>
+                            <li><a href="index.html" id="home">Home</a></li>
+                            <li><a href="sobre.html" id="sobre">Sobre</a></li>
+                            <li><a href="historia.html" id="historia">História</a></li>
+                            <li><a href="produtos.html" id="produtos">Produtos</a></li>
+                            <li><a href="endereco.html" id="endereco">Endereço</a></li>
+                        </ul>
+                    </div>
+                    <div class="float-right icons-sociais">
+                        <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter fa-lg" aria-hidden="true" id="btn-twitter"></i></a>
+                        <a href="https:/web.whatsapp.com" target="_blank"><i class="fa fa-whatsapp fa-lg" aria-hidden="true" id="btn-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook fa-lg" aria-hidden="true" id="btn-facebook"></i></a>
+                        <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram fa-lg" aria-hidden="true" id="btn-instagram"></i></a>
+                   </div>
+                
+                     </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Endereço -->
+
+    <main class="ondeEstamos">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 onde-estamos">
+                    <h1 class="main-title">Onde Estamos</h1>
+                    <p>Avenida Brasil - Santa Efigênia, Belo Horizonte - MG</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3750.938365704971!2d-43.92899658563387!3d-19.927001943360818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa699ebe3afa275%3A0xefd90408e7f51e4f!2sAv.%20Brasil%20-%20Santa%20Efig%C3%AAnia%2C%20Belo%20Horizonte%20-%20MG%2C%2030140-001!5e0!3m2!1spt-BR!2sbr!4v1593286977712!5m2!1spt-BR!2sbr">
+                    </iframe>                
+                    <ul>
+                        <li> <i class="fa fa-phone fa-lg"></i> (31) 4002-8922</li>
+                        <li> <i class="fa fa-whatsapp fa-lg"></i> (31) 99987457</li>
+                        <li> <i class="fa fa-envelope fa-lg"></i> evga@contatoevga.com.br</li>
+                    </ul>
+            </div>
+            </div>
+        </div>
+    </main>
+    <footer class="rodape">
+        <p>&copy; EVGA - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVGA - Artigos Eletrônicos</title>
+    <!-- Estilos -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!-- Script FontAwesome-->
+    <script src="https://kit.fontawesome.com/d0aebddfaf.js" crossorigin="anonymous"></script>
+    <!-- Paralax-->
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+    <!-- Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- Linkar bootstrap CDN e jQuery e FontAwesome para ícones--> 
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container-fluid cabecalho">
+                <div class="row">
+                    <div class="col-md-6 logo">
+                            <h1 class="logo-evga"><img src="img/EVGA-logo-13.png" alt="logo"></h1>
+                    </div>
+                    <div class="col-md-6 elementos-busca">
+                        <form action="index.html" method="post" class="procura">
+                            <input type="text" name="busca" id="busca" placeholder="Faça uma busca" class="float-left">
+                            <button id="btn-search" class="float-right"> 
+                                 <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+        </div>
+    </header>
+    <!-- Barra de Navegação -->
+    
+    <nav class="navegacao">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 ">
+                    <div class="float-left nav-links">
+                        <ul>
+                            <li><a href="index.html" id="home">Home</a></li>
+                            <li><a href="sobre.html" id="sobre">Sobre</a></li>
+                            <li><a href="historia.html" id="historia">História</a></li>
+                            <li><a href="produtos.html" id="produtos">Produtos</a></li>
+                            <li><a href="endereco.html" id="endereco">Endereço</a></li>
+                        </ul>
+                    </div>
+                    <div class="float-right icons-sociais">
+                        <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter fa-lg" aria-hidden="true" id="btn-twitter"></i></a>
+                        <a href="https:/web.whatsapp.com" target="_blank"><i class="fa fa-whatsapp fa-lg" aria-hidden="true" id="btn-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook fa-lg" aria-hidden="true" id="btn-facebook"></i></a>
+                        <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram fa-lg" aria-hidden="true" id="btn-instagram"></i></a>
+                   </div>
+                
+                     </div>
+            </div>
+        </div>
+    </nav>
+    <!-- História da empresa -->
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="main-title">Nossa História</h1>
+                </div>
+                <div class="col-md-12 sobre-nos">
+                    <div class="img">
+                        <img src="img/historiaEscritorio.jpg" alt="loga" class="img-responsive img-ilustracao">
+                    </div>
+                    <div class="s">
+                        <p class="">
+                            Mussum Ipsum, cacilds vidis litro abertis. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl. Leite de capivaris, leite de mula manquis sem cabeça. Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Seção para Newsletter -->
+    <section class="newsletter">
+        <div class="container-fluid cadastra-newsletter1">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Newsletter</h3>
+                     <p>Receba nossas novidades por email</p>
+                </div>
+                <div class="col-md-12 cadastra-news">
+                    <form action="cadastra-newsletter" method="POST">
+                    <input type="text" name="nome" id="nome-letter" placeholder="Seu nome">
+                      <input type="email" name="email" id="email-letter" placeholder="Seu email">
+                     <button>Cadastrar</button>
+                </div>
+            </div>
+        </form>
+        </div>     
+    </section>
+    <!-- Add outra sessão futuramente -->
+    <div>
+        
+    </div>
+    <footer class="rodape">
+        <p>&copy; EVGA - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>

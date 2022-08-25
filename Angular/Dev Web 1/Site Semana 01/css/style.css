@@ -1,0 +1,324 @@
+/*---------------------- Estilos Gerais ----------------------*/
+*{
+    font-family: 'Roboto', sans-serif;
+}
+.row{
+    margin: 0;
+}
+.container{
+    padding: 70px 0;
+}
+p{
+    font-size: 14px;
+    font-weight: bolder;
+    color: #ffffffcb;
+}
+body{
+    background-image: url('../img/background01.jpg');
+    background-position: top;
+}
+li{
+    list-style: none;
+}
+img.img-ilustracao{
+    width: 400px;
+    height: 300px;
+}
+/*----------------------  Cabeçalho ----------------------*/
+.cabecalho{
+    width: 100%;
+    padding: 40px 8%;
+    background-color: #FF583D;
+}
+.logo, .elementos-busca{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.logo{
+    width: 70%;
+}
+.elementos-busca{
+    width: 30%;
+}
+.elementos-busca .procura, .logo .logo-evga{
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+input[type="text"], #btn-search
+{
+    outline: none;
+    border: 2px solid transparent;
+    height: 45px;
+}
+/* Texto de procura */
+input[type="text"]{
+    color: #3b3a3ae1;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: 85%;
+}
+input[type="text"]:focus{
+    background-color: initial;
+    border-color: #000;
+    color: #FFF;
+}
+input[type="text"]:focus::placeholder{
+   color: #FFF;
+}
+/* Botão Procura */
+#btn-search{
+    display: inline;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 15%;
+    transition: .5s;
+    background-color: #b43604;
+    color: #c2c20b;
+}
+#btn-search:hover
+{
+    background-color: #912900;
+    color: #ebeb05;
+}
+/* Placeholder */
+.cabecalho form input::placeholder{
+    color:gray;
+    font-weight: normal;
+    font-size: 1.05em;
+}
+
+/*---------------------- Nav Bar ----------------------*/
+.navegacao, .nav-container{
+    background-color: #000;
+    height: 50px;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline;
+    line-height: 50px;
+    margin-right: 20px;
+    
+}
+.nav-links a{
+    text-decoration: none;
+    color: #c7c2c2e1;
+    transition: .3s;
+}
+.nav-links a:hover{
+    color: #FFF;
+}
+.nav-links{
+    width: 50%;
+}
+.icons-sociais{
+    line-height: 50px;
+}
+.icons-sociais i{
+    margin-right: 20px;
+    color: #FFF;
+    transition: .2s;
+}
+.icons-sociais i:hover{
+    
+    text-shadow: 10px -5px  rgba(177, 173, 173, 0.144);
+}
+#btn-twitter:hover{
+    color: rgba(64, 106, 184, 0.932);
+    filter: brightness(100%);
+}
+#btn-whatsapp:hover{
+    color: rgba(55, 196, 36, 0.932);
+    filter: brightness(100%);
+}
+#btn-facebook:hover{
+    color: rgba(13, 110, 167, 0.993);
+    filter: brightness(100%);
+}
+#btn-instagram:hover{
+    color: rgb(116, 82, 38);
+    filter: brightness(100%);
+}
+#btn-github:hover{
+    color: rgb(128, 0, 255);
+    filter: contrast(100%);
+}
+/*---------------------- Sobre nós e onde estamos ----------------------*/
+.main-title{
+    color: #444;
+    margin: 0 0 65px 0;
+    font-size: 40px;
+    text-align: center;
+}
+
+.main-title::after{ /* Cria um pseudoelemento html com estilização css */
+    content: "";
+    border-top: 2px solid #333;
+    width: 8%;
+    position: absolute;
+    top: 50px;
+    left: 46.4%;
+}
+.sobre-nos{
+    text-align: center;
+    background-color: #d3d3d300;
+}
+.sobre-nos p{
+    margin: 20px 100px;
+}
+.sobre-nos img{
+    border: 1px solid rgba(128, 128, 128, 0.301);
+}
+.onde-estamos{
+    text-align: center;
+}
+.onde-estamos p{
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+}
+.onde-estamos p::after{
+    content: "";
+    border-top: 2px solid rgba(51, 51, 51, 0.336);
+    width: 6%;
+    position: absolute;
+    top: 130px;
+    left: 47%;
+}
+.onde-estamos ul li{
+    color: #dfd7d7;
+    transition: .2s;
+}
+.onde-estamos ul li:hover{
+    color: #FFF;
+    filter: brightness(100%);
+    cursor: pointer;
+}
+/*---------------------- Newsletter ----------------------*/
+.newsletter{
+    padding: 40px;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 240px;
+}
+.newsletter .container-fluid{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.newsletter input[type="text"], .newsletter input[type="email"]{
+    width: 40%;
+    height: 50px;
+    outline: none;
+    border: 1.2px solid #FFF;
+    background-color: initial;
+    color: #FFF;
+    margin-right: 4px;
+    border-radius: 5px;
+}
+.newsletter input[type="text"]::placeholder, .newsletter input[type="email"]::placeholder{
+    color: #dbd2d2;
+}
+.newsletter button{
+    background-color: initial;
+    border: 1.2px solid #FFF;
+    color: #FFF;
+    height: 50px;
+    width: 12%;
+    border-radius: 5px;
+    transition: .5s;
+    font-weight: 400;
+}
+.newsletter button:hover{
+    background-color: #FFF;
+    color: #000;
+    height: 50px;
+}
+.newsletter p, .newsletter h3{
+    color: #FFF;
+}
+.newsletter p{
+    margin-top: -5px;
+}
+/*---------------------- Rodapé ----------------------*/
+.rodape{ 
+    width: 100%;
+    background-color: #FF583D;
+    height: 55px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+.rodape p{
+    margin-top: 10px;
+}
+
+/*---------------------- Responsividade ----------------------*/
+
+@media(max-width: 768px)
+{
+    .cabecalho{
+        width: 100%;
+       padding-right: 130px;
+       margin: 0;
+    }
+    .navegacao ul{
+        margin-left: -20px;
+    }
+    .navegacao li{
+        font-size: 14px;
+        color: #FFF;
+    }
+    .newsletter button{
+        width: 16%;
+    }
+}
+@media(max-width: 425px)
+{
+    .elementos-busca{
+        display: none;
+    }
+    .logo{
+        display: none;
+    }
+    .cabecalho{
+        background-image: url('../img/EVGA-logo-13.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .navegacao ul{
+        margin-right: -75px;
+        margin-left: -25px;
+    }
+    .navegacao li{
+        font-size: 12px;
+        margin-left: -14px;   
+    }
+    .navegacao i{
+        font-size: 12px;
+
+    }
+    .icons-sociais{
+        margin-right: -25px;
+    }
+    .sobre-nos p{
+        margin: 20px -12px;
+        padding: 20px 5px;
+    }
+    .newsletter{
+        padding: -50px -70px;
+    }
+    .newsletter #nome-letter, .newsletter #email-letter{
+        width: 30%;
+        height: 40px;
+    }
+    .newsletter button{
+        margin-left: 10px;
+        height: 40px;
+        width: 30%;
+    }
+    .cadastra-newsletter1{
+        width: 100%;
+    }
+    
+}

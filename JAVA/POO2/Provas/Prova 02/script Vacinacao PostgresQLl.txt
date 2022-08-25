@@ -1,0 +1,48 @@
+ -- DDL
+CREATE TABLE TipoVacina(
+	idTipoVacina serial primary key,
+	descricao VARCHAR(45)
+);
+
+CREATE TABLE Vacina(
+	idVacina serial primary key,
+	nomeVacina VARCHAR(255),
+	qtdeDoses int,
+	idTipoVacina int not null references TipoVacina(idTipoVacina) ON DELETE NO ACTION ON UPDATE NO ACTION
+);
+
+CREATE TABLE Paciente(
+	idPaciente serial primary key,
+	nomePaciente VARCHAR(255),
+	cpf VARCHAR(14),
+	dtDose1 DATE 
+	dtDose2 DATE,
+	precisaDose2 int,
+	idVacina int not null references Vacina(idVacina) ON DELETE NO ACTION ON UPDATE NO ACTION
+);
+
+-- DML
+
+START TRANSACTION;
+
+INSERT INTO TipoVacina (idTipoVacina, descricao) VALUES (1, 'COVID');
+INSERT INTO TipoVacina (idTipoVacina, descricao) VALUES (2, 'Outras');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+INSERT INTO Vacina (idVacina, nomeVacina, qtdeDoses, idTipoVacina) VALUES (1, 'CoronaVac', 2, 1);
+INSERT INTO Vacina (idVacina, nomeVacina, qtdeDoses, idTipoVacina) VALUES (2, 'AstraZeneca', 2, 1);
+INSERT INTO Vacina (idVacina, nomeVacina, qtdeDoses, idTipoVacina) VALUES (3, 'Pfizer', 2, 1);
+INSERT INTO Vacina (idVacina, nomeVacina, qtdeDoses, idTipoVacina) VALUES (4, 'BCG', 1, 2);
+INSERT INTO Vacina (idVacina, nomeVacina, qtdeDoses, idTipoVacina) VALUES (5, 'Gripe', 1, 2);
+INSERT INTO Vacina (idVacina, nomeVacina, qtdeDoses, idTipoVacina) VALUES (6, 'Polio', 1, 2);
+INSERT INTO Vacina (idVacina, nomeVacina, qtdeDoses, idTipoVacina) VALUES (7, 'Sarampo', 1, 2);
+
+COMMIT;
+
+-- Testes
+Select * FROM Paciente p , Vacina v, TipoVacina t WHERE p.idVacina = v.idVacina AND v.idTipoVacina = t.idTipoVacina 
+AND p.precisaDose2 = 1

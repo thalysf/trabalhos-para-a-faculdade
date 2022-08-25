@@ -1,0 +1,265 @@
+/* Reset Css */
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+    font-family: 'Newsreader', serif;
+}
+nav li, ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.2s linear all;
+}
+a:hover{
+    opacity: 1;
+}
+
+/* Header */
+
+header
+{
+    background-color: #101111;
+    background-image: url(../img/botoes-controle-ps.png);
+    background-size: 12rem;
+    background-repeat: repeat-x;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    min-height: 200px;
+}
+header img{
+    width: 160px;
+}
+header nav{
+    display: flex;
+}
+
+header li a{
+    color: #f1f1f1;
+    font-size: 1.4rem;
+}
+header li a:hover{
+    text-shadow: 1px 1px 2px rgba(196, 196, 196, 0.575);
+}
+
+header li{
+    margin: 0 15px;
+}
+header li:first-child{
+    margin-left: 0;
+}
+header li:last-child{
+    margin-right: 0;
+}
+@media (max-width: 700px)
+{
+    header{
+        flex-direction: column;
+    }
+    header img{
+        margin-bottom: 18px;
+    }
+}
+
+/* Hero */
+
+.hero{
+    background-image: url(../img/returnal-game.jpg);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    min-height: 100vw;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    text-shadow: 1px 1px 20px rgb(222, 245, 10);
+}
+.hero h1{
+    font-size: 3.2rem;
+    margin-bottom: 15px;
+}
+.hero h3{
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+.hero .btn{
+    background-color: rgba(7, 7, 7, 0.795);
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #f1f1f1;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 20px 50px;
+}
+.hero .btn:hover{
+    color: rgba(225, 250, 0, 1);
+}
+@media (max-width: 900px)
+{
+    .hero h1{
+        font-size: 2.2rem;
+    }
+    .hero h3{
+        font-size: 1.4rem;
+    }
+}
+/* Grid Estilos Gerais */
+.grid-title{
+    font-size: 3rem;
+    margin-bottom: 35px;
+    text-align: center;
+}
+.grid-paragraph{
+    font-size: 1.8rem;
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 35px;
+}
+.grid-hr{
+    width: 200px;
+    height: 2px;
+    background-color: rgb(47, 85, 255);
+    border: none;
+    margin-bottom: 70px;
+}
+/* Mural de Fotos */
+.mural{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 50px;
+}
+.mural .grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.mural .grid li{
+    height: 350px;
+    padding: 20px;
+    border-radius: 5px;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9;
+    transition: all linear 0.2s;
+}
+.mural .grid li:hover{
+    opacity: 1;
+    box-shadow: 2px 2px 10px #1fa4b649;
+    cursor: pointer;
+}
+.mural .grid li.sm-30{
+    flex-basis: 30%;
+}
+.mural .grid li.md-50{
+    flex-basis: 50%;
+}
+.mural .grid li.md-70{
+    flex-basis: 70%;
+}
+.mural .grid li.lg-100{
+    flex-basis: 100%;
+}
+@media (max-width: 700px)
+{
+    .mural .grid li.sm-30,
+    .mural .grid li.md-50,
+    .mural .grid li.md-70,
+    .mural .grid li.lg-100
+    {
+        flex-basis: 100%;
+    }
+}
+/* Ofertas */
+.ofertas .grid-title, .ofertas .grid-paragraph{
+    color: #fff !important;
+}
+.ofertas .grid-hr{
+    width: 400px !important;
+}
+
+.ofertas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 50px;
+    background-color: rgb(48, 48, 48);
+}
+.ofertas .grid{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.ofertas .grid li{
+    padding: 0 30px;
+    text-align: center;
+}
+.ofertas .grid li i{
+    color: #649aff;
+    font-size: 50px;
+    margin-bottom: 25px;
+}
+.ofertas .grid li h4{
+    font-size: 1.5rem;
+    color: #5e96ff; 
+    margin-bottom: 30px;
+}
+.ofertas .grid li p{
+    color: #FFF;
+    max-width: 350px;
+    text-align: center;
+}
+@media (max-width: 850px)
+{
+    .ofertas .grid{
+        flex-direction: column;
+    }
+    .ofertas .grid li{
+        margin-bottom: 30px;
+    }
+    .grid-title{
+        font-size: 2.4rem !important;
+    }
+    .grid-paragraph{
+        font-size: 1.6rem !important;
+    }
+}
+/* Footer */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: #101111;
+    background-image: url(../img/botoes-controle-ps.png);
+    padding: 70px 0;
+    min-height: 200px;
+    align-items: center;
+}
+footer ul{
+    display: flex;
+    margin-bottom: 26px;
+}
+footer ul li:not(:last-child){
+    margin-right: 20px;
+}
+footer ul li a{
+    color: #06e2ff;
+    font-size: 2.2rem;
+    text-decoration: none;
+}
+footer p{
+    color: #ffffff;
+    text-align: center;
+}

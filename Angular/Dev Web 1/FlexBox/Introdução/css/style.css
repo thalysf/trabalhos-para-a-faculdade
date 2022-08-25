@@ -1,0 +1,55 @@
+.container
+{
+    background-color: #ccc;
+    height: 400px;
+    display: flex;
+    flex-direction: row; 
+    /*column | column-reverse |row-reverse | row -> direção da renderização*/
+
+    flex-wrap: wrap;
+    /*wrap | nowrap | wrap-reverse-> quebrar linha ou não conforme ocupação dos elementos na página*/
+
+    /* flex-flow: row nowrap; (flex-direction, flex-wrap)*/
+
+    justify-content: flex-start;
+    /*flex-start | flex-end | center | space-between | space-around -> alinhamento horizontal*/
+
+    align-items: stretch;
+    /*stretch | flex-start | flex-end | center | baseline |-> alinhamento vertical quando não há quebra de linha*/
+
+    align-content: flex-start;
+    /*stretch | flex-start | flex-end | center | space-between | space-around -> alinhamento vertical quando há quebra de linha*/
+    /*
+        OBS: 
+        o valor stretch que faz com que os elementos crescam igualmente
+        na vertical, apenas funciona quando para esses elementos em questão
+        não foi definido altura(heigth)
+        */
+}
+
+.item {
+    background-color: #474444;
+    color: #f8f8f8;
+    padding: 20px;
+    margin: 5px;
+    height: 30px;
+    flex-grow: 1;  /*Largura dos itens (para mais)*/
+    flex-shrink: 1; /*Largura dos itens (para menos)*/
+    flex-basis: 20px; /*Largura inicial do item*/
+    flex: 1 1 20px; /*(flex-grow,lex-shrink,flex-basis)*/
+}
+
+.article-01{
+    order: 3;
+    /* flex-grow: 0;  Largura dos itens */
+}
+.article-02{
+    order: 1;
+    align-self: center;
+}
+.article-03{
+    order: 2;
+}
+.article-04{
+    order: 4;
+}

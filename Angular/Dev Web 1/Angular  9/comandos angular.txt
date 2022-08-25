@@ -1,0 +1,10 @@
+npm init -y -> package.json
+npm i json-server -> instalar dependencias iniciais
+npm start -> iniciar API
+npm  i -g @angular/cli -> instalando angular comand line
+
+npm start -> iniciar aplicação do backend ou frontend
+
+ng g c components/template/nomeComponente -> criar componente (dentro da pasta frontend)
+ng g d directives/suaDiretiva -> criando diretivas (dentro da pasta frontend)
+ng g s components/product/nomeServico -> criando services (dentro da pasta frontend)

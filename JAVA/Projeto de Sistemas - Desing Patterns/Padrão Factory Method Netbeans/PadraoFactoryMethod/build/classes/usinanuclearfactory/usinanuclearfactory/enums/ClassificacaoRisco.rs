@@ -1,0 +1,1 @@
+usinanuclearfactory.enums.ClassificacaoRisco

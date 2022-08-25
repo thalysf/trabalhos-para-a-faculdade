@@ -1,0 +1,136 @@
+/* Reset Css */
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+    font-family: 'Newsreader', serif;
+}
+nav li, ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.2s linear all;
+}
+a:hover{
+    opacity: 1;
+}
+
+/* Header */
+
+header
+{
+    background-color: #101111;
+    background-image: url(../img/botoes-controle-ps.png);
+    background-size: 12rem;
+    background-repeat: repeat-x;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    border-bottom: 2px solid #006979;
+}
+header img{
+    width: 200px;
+}
+header nav{
+    display: flex;
+}
+
+header li a{
+    color: #f1f1f1;
+    font-size: 1.4rem;
+}
+header li a:hover{
+    text-shadow: 1px 1px 2px rgba(196, 196, 196, 0.575);
+}
+
+header li{
+    margin: 0 15px;
+}
+header li:first-child{
+    margin-left: 0;
+}
+header li:last-child{
+    margin-right: 0;
+}
+@media (max-width: 700px)
+{
+    header{
+        flex-direction: column;
+    }
+    header img{
+        margin-bottom: 18px;
+    }
+}
+
+/* Hero */
+
+.hero{
+    background-image: url(../img/returnal-game.jpg);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    min-height: 100vw;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    text-shadow: 1px 1px 20px rgb(222, 245, 10);
+}
+.hero h1{
+    font-size: 3.2rem;
+    margin-bottom: 15px;
+}
+.hero h3{
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+.hero .btn{
+    background-color: rgba(7, 7, 7, 0.795);
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #f1f1f1;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 20px 50px;
+}
+.hero .btn:hover{
+    color: rgba(225, 250, 0, 1);
+}
+@media (max-width: 900px)
+{
+    .hero h1{
+        font-size: 2.2rem;
+    }
+    .hero h3{
+        font-size: 1.4rem;
+    }
+}
+
+/* Footer */
+
+footer
+{
+    background-color: #101111;
+    background-image: url(../img/botoes-controle-ps.png);
+    background-size: 12rem;
+    background-repeat: repeat-x;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding: 20px 50px;
+    border-top: 2px solid #006979;
+}
+footer > *{
+    color: #FFF;
+    text-align: center;
+}

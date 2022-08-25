@@ -1,0 +1,155 @@
+<!--
+    Aluno: Thalys Fabrete Cândido, V06;
+    OBS: Layout é simples e não foi implementada responsividade para tal.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Css Reset simples */
+        body, h1, h2, h3, h4, h5, h6{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+        }
+        /* Estilizando Cabeçalho e rodapé */
+        header, footer{
+            height: 20vh;
+            background-color: rgba(95, 88, 88, 0.582);
+            padding: 20px;
+            text-align: center;
+        }
+        /* Estilizando todos h1 encapsulados em uma tag header */
+        header h1{
+            color: #FFF;
+            font-size: 3.4em;
+        }
+        /* Estilizando todos p encapsulados em uma tag header ou footer*/
+        header p, footer p{
+            color: rgba(255, 255, 255, 0.795);
+            font-size: 1.4em;
+        }
+        /* Estilizando tag main */
+        main
+        {
+            background-color: rgba(134, 134, 134, 0.582);
+            height: 100vh;
+            text-align: center;
+        }
+        main h2
+        {
+            color: rgba(255, 255, 255, 0.884);
+            font-size: 2.8em;
+        }
+        #title-temas
+        {
+            font-size: 2em !important;
+            text-shadow: 5px 5px 2px rgba(63, 61, 61, 0.280);
+        }
+        /* Dimencionado colunas para organizar o site em duas colunas */
+        .column-left, .column-right
+        {
+            width: 45vw;
+            height: 80%;
+        }
+        /* Coluna esquerda flutua para esquerda... */
+        .column-left
+        {
+            float: left;
+        }
+        /* Coluna direita flutua para direita... */
+        .column-right
+        {
+            float: right;
+        }
+        /* Deixanto as tags a baixo com o msm tamanho para serem agradáveis de visualizar... */
+        h3, h4, h5, h6{
+            font-size: 1.8em;
+            margin-bottom: 8px;
+        }
+        /* Personalizando imagens que irão fazer parte do card... */
+        img
+        {
+            width: 120px;
+            border: 2px solid black;
+            border-radius: 5px;
+            height: 100px;
+        }
+        /* Personalizando card... */
+        .card
+        {
+            background-color: rgb(222, 228, 222);
+            border: 2px solid gray;
+            border-radius: 5px;
+            width: 380px;
+            height: 260px;
+            margin: 10px auto;
+            transition: 1s linear all;
+        }
+         /* Personalizando card quando mouse passa por cima... */
+        .card:hover
+        {
+            background-color: rgba(102, 201, 226, 0.37);
+            cursor: pointer;
+            box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.342);
+        }
+        /* Personalizando scroll */
+        ::-webkit-scrollbar-track {
+           background-color: #ced4d6a6;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+            background: #ced3d4;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(95, 88, 88, 0.582);
+        }
+    </style>
+    <title>Site Básico</title>
+</head>
+<body>
+    <header>
+        <h1>Cabeçalho do site...</h1>
+        <p>Descrição do site...</p>
+    </header>
+    <main>
+        <h2>Corpo principal do site...</h2>
+        <h2 id="title-temas">Temas do site</h2>
+        <br>
+        <div class="column-left">
+            <div class="card">
+                <h3>IOT</h3>
+                <img src="https://cdn.pixabay.com/photo/2018/04/21/02/11/iot-3337536_960_720.png" alt="IOT img">
+                <p>Descrição IOT...</p>
+            </div>
+            <div class="card">
+            <h4>Big Data</h4>
+             <img src="https://img2.gratispng.com/20180212/dbq/kisspng-big-data-analytics-information-internet-of-things-ppt-element-5a8143029e1814.7132214915184207386476.jpg" alt="Big Data img">
+                <p>Descrição Big Data...</p>
+            </div>
+        </div>
+        <div class="column-right">
+            <div class="card">
+            <h5>Data Science</h3>
+                <img src="https://www.kindpng.com/picc/m/73-731236_transparent-science-icons-png-data-science-icon-png.png" alt="Data Science img">
+                <p>Descrição Data Science...</p>
+            </div>
+            <div class="card">
+                <h6>IA</h3>
+                    <img src="https://marvel-b1-cdn.bc0a.com/f00000000216283/www.fortinet.com/content/dam/fortinet/images/icons/solutions/web-icon-ai-deployed-inline.png" alt="IA img">
+                    <p>Descrição IA...</p>
+            </div>
+        </div>
+        
+    </main>
+    <footer>
+        <p>Rodapé do site...</p>
+    </footer>
+</body>
+</html>

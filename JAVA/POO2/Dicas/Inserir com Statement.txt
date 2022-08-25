@@ -1,0 +1,10 @@
+public void inserir(Produto prod) throws ClassNotFoundException, SQLException
+    {
+        Statement statement = ConexaoPostgreSQL.obterConexao().createStatement();
+        String sql = "INSERT INTO PRODUTO(id_categoria, nome, preco) "
+                + "VALUES ("
+                + prod.getCategoria().getId_categoria() + ",' "
+                + prod.getNome() + "' ,"
+                + prod.getPreco() + ")";
+        statement.execute(sql);
+    }
